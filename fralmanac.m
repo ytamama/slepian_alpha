@@ -118,12 +118,13 @@ function val=fralmanac(neem,plenet)
 % Among others, from http://nssdc.gsfc.nasa.gov/planetary/factsheet/
 %
 % Last modified by fjsimons-at-alum.mit.edu, 01/17/2019
+% Directory modified by Yuri Tamama, April 7 2020
 
 defval('neem',[])
 defval('plenet','Earth')
 
 % Change this to load the variable instead of the whole file
-load(fullfile(getenv('IFILES'),'EARTHMODELS','CONSTANTS',plenet))
+load(fullfile(getenv('IDATA'),'EARTHMODELS','CONSTANTS',plenet))
 
 if nargin>0 & ~isempty(neem) 
     val=eval([plenet '.' neem]);
