@@ -124,7 +124,8 @@ defval('neem',[])
 defval('plenet','Earth')
 
 % Change this to load the variable instead of the whole file
-load(fullfile(getenv('IDATA'),'EARTHMODELS','CONSTANTS',plenet))
+%load(fullfile(getenv('IDATA'),'EARTHMODELS','CONSTANTS',plenet))
+load(fullfile(getenv('IDATA'),plenet))
 
 if nargin>0 & ~isempty(neem) 
     val=eval([plenet '.' neem]);
