@@ -34,9 +34,8 @@ lon2lat2=lon2lat2*pi/180;
 dist=2*asin(sqrt((sin((lat1-lat2)/2)).^2 + ...
     cos(lat1).*cos(lat2).*(sin((lon1-lon2)/2)).^2));
 
-% gcdkm=dist*fralmanac('Radius')/1000;
-% replace with directly multiplying by Earth's radius
-% value from nssdc.gsfc.nasa.gov/planetary/factsheet
-gcdkm=dist*6378/1000;
+gcdkm=dist*fralmanac('Radius')/1000;
+%for now, do
+%gcdkm=dist*6378/1000;
 delta=dist*180/pi;
 
